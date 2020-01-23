@@ -5,7 +5,18 @@ import { keyframes } from "@emotion/core";
 import { Emoji } from "./Emoji";
 import { colors } from "./colors";
 
+const mouthAnimation = keyframes`
+	25% {transform: rotate(-12deg);}
+  50% {transform: rotate(12deg);}
+	75% {transform: rotate(-12deg);}
+`;
+
 const HappyStyled = styled(Emoji)`
+  position: relative;
+  &:hover {
+    animation: ${mouthAnimation} 1s ease-in infinite;
+  }
+
   .eyebrows {
     left: calc(50% - 3px);
     top: 30px;
@@ -42,6 +53,26 @@ const HappyStyled = styled(Emoji)`
     }
   }
 
+  .blush {
+    &:before {
+      width: 6px;
+      height: 6px;
+      background: transparent;
+      border-radius: 50%;
+      bottom: -64px;
+      left: 58px;
+      box-shadow: -35px -2px 25px 10px ${colors.angry},
+        35px -2px 25px 10px ${colors.angry};
+    }
+    position: absolute;
+
+    &:before,
+    &:after {
+      position: absolute;
+      content: "";
+    }
+  }
+
   .mouth {
     position: absolute;
     top: 60px;
@@ -63,17 +94,6 @@ const HappyStyled = styled(Emoji)`
       z-index: 1;
     }
 
-    &:before {
-      width: 6px;
-      height: 6px;
-      background: transparent;
-      border-radius: 50%;
-      bottom: -14px;
-      left: calc(50% - 3px);
-      box-shadow: -35px -2px 25px 10px ${colors.angry},
-        35px -2px 25px 10px ${colors.angry};
-    }
-
     &:before,
     &:after {
       position: absolute;
@@ -86,5 +106,6 @@ export const Happy = () => (
   <HappyStyled>
     <div className="eyebrows" />
     <div className="mouth" />
+    <div className="blush" />
   </HappyStyled>
 );
