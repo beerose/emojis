@@ -5,6 +5,7 @@ import styled from "@emotion/styled";
 import "./styles.scss";
 import { Love } from "./Love";
 import { Hate } from "./Hate";
+import { Happy } from "./Happy";
 
 type Reaction = {
   emoji: string;
@@ -30,6 +31,7 @@ function App() {
     <ReactionsRow>
       <Love />
       <Hate />
+      <Happy />
     </ReactionsRow>
   );
 }
