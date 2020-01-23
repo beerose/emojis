@@ -1,2 +1,0 @@
-# emojis
-Created with CodeSandbox
