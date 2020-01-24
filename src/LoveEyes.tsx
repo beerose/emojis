@@ -13,7 +13,7 @@ const eyesAnimation = keyframes`
 `;
 
 const mouthAnimation = keyframes`
-  25% {transform: scaleX(0.6); }
+  25% {transform: scaleX(0.7); }
 	70% {transform: scaleX(1.0) }
 `;
 
@@ -69,7 +69,7 @@ const LoveStyled = styled(Emoji)`
       animation: ${eyesAnimation} 0.8s linear infinite alternate;
     }
     > .mouth {
-      animation: ${mouthAnimation} 1.2s ease-out infinite;
+      animation: ${mouthAnimation} 1.5s ease-in infinite;
     }
   }
 
