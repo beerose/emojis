@@ -2,7 +2,6 @@ import * as React from "react";
 import { render } from "react-dom";
 import styled from "@emotion/styled";
 
-import "./styles.scss";
 import { Love } from "./Love";
 import { Hate } from "./Hate";
 import { Happy } from "./Happy";
