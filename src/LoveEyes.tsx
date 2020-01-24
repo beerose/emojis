@@ -13,8 +13,8 @@ const eyesAnimation = keyframes`
 `;
 
 const mouthAnimation = keyframes`
-  25% {transform: scaleX(0.7); }
-	70% {transform: scaleX(1.0) }
+  25% {transform: scaleX(1.0); }
+	70% {transform: scaleX(0.5); }
 `;
 
 const Heart = styled.div`
@@ -66,37 +66,24 @@ const LoveStyled = styled(Emoji)`
 
   &:hover {
     > .heart {
-      animation: ${eyesAnimation} 0.8s linear infinite alternate;
+      animation: ${eyesAnimation} 0.8s linear infinite;
     }
     > .mouth {
-      animation: ${mouthAnimation} 1.5s ease-in infinite;
+      animation: ${mouthAnimation} 1s ease-out infinite;
     }
   }
 
   .mouth {
     position: absolute;
-    top: 65px;
-    background: transparent;
-    left: 50%;
+    background: ${colors.black};
 
-    &:after {
-      width: 40px;
-      height: 20px;
-      left: calc(50% - 20px);
-      top: 15px;
-      border-bottom-left-radius: 40px;
-      border-bottom-right-radius: 40px;
+    left: calc(50% - 20px);
+    top: calc(50% + 20px);
 
-      background: ${colors.black};
-      box-sizing: border-box;
-      z-index: 1;
-    }
-
-    &:before,
-    &:after {
-      position: absolute;
-      content: "";
-    }
+    width: 40px;
+    height: 20px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
   }
 `;
 
