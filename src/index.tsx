@@ -6,6 +6,7 @@ import { Love } from "./Love";
 import { Hate } from "./Hate";
 import { Happy } from "./Happy";
 import { LoveEyes } from "./LoveEyes";
+import { Sad } from "./Sad";
 
 type Reaction = {
   emoji: string;
@@ -20,10 +21,12 @@ const reactions: Reaction[] = [
   { name: "hate", emoji: "😡", count: 10 }
 ];
 
+ 
 const ReactionsRow = styled.div`
   display: flex;
   justify-content: center;
   padding: 20px;
+  flex-wrap: wrap;
 `;
 
 function App() {
@@ -33,6 +36,7 @@ function App() {
       <Hate />
       <Happy />
       <LoveEyes />
+      <Sad />
     </ReactionsRow>
   );
 }
