@@ -14,7 +14,7 @@ const mouthAnimation = keyframes`
 const HappyStyled = styled(Emoji)`
   position: relative;
   &:hover {
-    animation: ${mouthAnimation} 1s ease-in infinite;
+    animation: ${mouthAnimation} 0.8s ease-in infinite;
   }
 
   .eyebrows {

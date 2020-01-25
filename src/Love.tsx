@@ -14,7 +14,7 @@ const LoveStyled = styled(Emoji)`
   background: ${colors.love};
 
   &:hover > .heart {
-    animation: ${animation} 1s linear infinite alternate;
+    animation: ${animation} 0.8s linear infinite alternate;
   }
 
   .heart {

@@ -2,10 +2,11 @@ import * as React from "react";
 import { render } from "react-dom";
 import styled from "@emotion/styled";
 
-import "./styles.scss";
 import { Love } from "./Love";
 import { Hate } from "./Hate";
 import { Happy } from "./Happy";
+import { LoveEyes } from "./LoveEyes";
+import { Sad } from "./Sad";
 
 type Reaction = {
   emoji: string;
@@ -20,10 +21,12 @@ const reactions: Reaction[] = [
   { name: "hate", emoji: "😡", count: 10 }
 ];
 
+ 
 const ReactionsRow = styled.div`
   display: flex;
   justify-content: center;
   padding: 20px;
+  flex-wrap: wrap;
 `;
 
 function App() {
@@ -32,6 +35,8 @@ function App() {
       <Love />
       <Hate />
       <Happy />
+      <LoveEyes />
+      <Sad />
     </ReactionsRow>
   );
 }

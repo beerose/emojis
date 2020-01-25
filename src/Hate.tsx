@@ -43,20 +43,18 @@ const HateStyled = styled(Emoji)`
     width: 6px;
     border-radius: 50%;
     background: transparent;
-    box-shadow: -44px 5px 0 0 ${colors.black}, -7px 16px 0 0 ${colors.black},
-      7px 16px 0 0 ${colors.black}, 44px 5px 0 0 ${colors.black};
 
     &:before,
     &:after {
       width: 50px;
       height: 20px;
-      border: 6px solid ${colors.black};
+      border: 5px solid ${colors.black};
       box-sizing: border-box;
       border-radius: 50%;
       border-top-color: transparent;
       border-left-color: transparent;
       border-right-color: transparent;
-      top: 0;
+      top: -3px;
       left: calc(50% - 25px);
     }
 
